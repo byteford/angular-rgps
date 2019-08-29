@@ -1,0 +1,6 @@
+<h3>Classes</h3>
+<div class=class-list *ngFor="let class of classes; index as classId">
+  <span>{{class.name}}</span>
+  <span>Abv: {{class.abv}}</span>
+  <span><a class=button [routerLink]="['/class',class.abv]">more info</a></span>
+</div>
