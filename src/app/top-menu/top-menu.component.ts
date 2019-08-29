@@ -7,7 +7,6 @@ import{classes} from '../classes'
 })
 export class TopMenuComponent implements OnInit {
   classes = classes;
-  classbtn = false;
   constructor() { }
 
   ngOnInit() {

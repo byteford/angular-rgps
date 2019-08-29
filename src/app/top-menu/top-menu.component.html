@@ -1,8 +1,9 @@
-<div (mouseleave)="classbtn=false">
-<a class="menu menutop" [routerLink]="['/thegame']" >The Game</a>
-<a class="menu menutop" [routerLink]="['/']" (mouseenter)="classbtn=true">classes</a>
+<div (mouseleave)="menuState=''">
 
-<div *ngIf="classbtn==true">
+<a class="menu menutop" [routerLink]="['/thegame']" >The Game</a>
+<a class="menu menutop" [routerLink]="['/']" (mouseenter)="menuState= 'class'">classes</a>
+
+<div *ngIf="menuState == 'class'">
 <div class=menuGroup *ngFor="let class of classes">
 <a class=menu [routerLink]="['/class',class.abv]">{{class.name}}</a>
 </div>
