@@ -1,0 +1,10 @@
+<div (mouseleave)="classbtn=false">
+<a class="menu menutop" [routerLink]="['/thegame']" >The Game</a>
+<a class="menu menutop" [routerLink]="['/']" (mouseenter)="classbtn=true">classes</a>
+
+<div *ngIf="classbtn==true">
+<div class=menuGroup *ngFor="let class of classes">
+<a class=menu [routerLink]="['/class',class.abv]">{{class.name}}</a>
+</div>
+</div>
+</div>
